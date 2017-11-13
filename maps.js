@@ -1,12 +1,33 @@
+var express = require('express');
+var bodyParser = require('body-parser');
+var request = require('request');
+var routes = require('./routes');
+var viewEngine = require('view-engine');
+var handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 
-function initMap() {
-    var startPoint = { lat: 51.321, lng: -0.150 };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: startPoint
-    });
-    var marker = new google.maps.Marker({
-        position: startPoint,
-        map: map
-    });
-}
+var app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+app.set('port', 3000);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use('/', routes);
+
+app.use(function (req, res) {
+  res.status(404);
+  res.send('404');
+});
+
+app.use(function (err, req, res, next) {
+  console.error(err.stack);
+  res.status(500);
+  res.send('500');
+});
+
+app.listen(app.get('port'), function () {
+  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+});
