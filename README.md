@@ -1,2 +1,0 @@
-# WombatPower
-First Project
