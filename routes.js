@@ -6,19 +6,16 @@ router.get('/', function (req, res, next) {
     var context = {
         test: 'test'
     };
-    console.log('test');
     res.render('bls', context);
-    console.log(context);
-    
 });
 
 router.post('/data/', function (req, res, next) {
-    console.log('b');
+    console.log('e');
 
     if (req.body['Add Series']) {
         var context = {};
         context.results = [];
-        console.log('c');
+        console.log('a');
         request({
             "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/APU0000702421",
             "method": "POST",
@@ -47,7 +44,7 @@ router.post('/data/', function (req, res, next) {
                         console.log(response.statusCode);
                     }
                     res.pipe('500');
-                    console.log('d');
+                    console.log('c');
 
                 }
             });
