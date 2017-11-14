@@ -22,7 +22,7 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 app.get("/data", function (req, res) {
-  axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/APU0000702421?registrationkey=4b920f31441640c28f78a718782d5f6e')
+  axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000000500000026?registrationkey=4b920f31441640c28f78a718782d5f6e')
     .then(function (response) {
       console.log(response);
       res.json(response.data.Results.series[0].data);
