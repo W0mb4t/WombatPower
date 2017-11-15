@@ -228,3 +228,34 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 }
+
+// Necessary to AJAX call fusion tables in order to have referencable data columns?!?!?!
+// var fusionURL = ['https://fusiontables.google.com/data?docid=10-15741He9QL1OYhAUdTwVaQaFhZLe-1DvXguGru#rows:id=1'];
+
+// $.ajax({
+//     url: fusionURL.join(''),
+//     dataType: 'jsonp',
+//     success: function (data) {
+//         console.log(data);
+//     }
+// });
+
+
+var myJSON = 0;
+
+$.getJSON('/data', function (data) {
+
+    $("#map").on('click', function () {
+        // console.log("a");
+        for (i = 0; i < data.length; i++) {
+            var myJSON = JSON.stringify(data[i].value);
+            // console.log(data[i]);
+
+            $("#unemployment-data").html("Unemployment rate by county: " + data[i].value + "%<br><br>");
+
+            if (i >= 0) {
+                return;
+            }
+        };
+    });
+});
