@@ -1,0 +1,45 @@
+body {
+  background-color: #1b1b1b;
+  font-family: 'Lato', sans-serif; }
+  body p {
+    color: #fffff3; }
+  body a {
+    color: #fffff3;
+    font-weight: 400; }
+
+header {
+  background: #5c4d8e;
+  color: #fffff3;
+  position: relative;
+  text-align: center;
+  height: 80px; }
+  header ul {
+    list-style: none; }
+  header li {
+    display: inline-block; }
+    header li a {
+      font-size: 18px;
+      text-decoration: none !important;
+      display: block;
+      padding: 30px 20px; }
+    header li a:hover {
+      color: #fffff3; }
+
+#landingphoto {
+  width: 100%; }
+#map {
+  height: 600px;
+  width: 48%; 
+  float:left; }
+.bottom-left {
+  position: absolute;
+  bottom:8px;
+  left:5px;
+  font-weight: 100;
+  font-size: 65px;
+  color: white; }
+#data-list {
+  color:white;
+  font-size: 30px; 
+  width:48%; 
+  float:right; }

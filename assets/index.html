@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="maps.js"></script>
+    <script type="text/javascript" src="dataapi.js"></script>
+    <title>WOMBAT</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 navbar">
+                    <ul>
+                        <li>
+                            <a href="#"> HOME </a>
+                        </li>
+                        <li>
+                            <a href="#"> TEST 1 </a>
+                        </li>
+                        <li>
+                            <a href="#"> TEST 2 </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <img id="landingphoto" src="images/mainphoto.png" alt="Suit Boy">
+                <div class="bottom-left">Project Wombat</div>
+                <div id="titlePhoto"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div id="map"></div>
+            </div>
+            <div class="col-6">
+                <br>
+                <div id="data-list">Lorem Ipsum: blah de blah blah</div>
+            </div>
+        </div>
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6avzTdjz-XSi_vpFFg05SG3Qt00MNROc&callback=initMap">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
