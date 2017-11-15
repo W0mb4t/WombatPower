@@ -1,41 +1,49 @@
 body {
   background-color: #1b1b1b;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  text-rendering: optimizeLegibility; }
   body p {
     color: #fffff3; }
   body a {
-    color: #fffff3;
+    color: #fef9f4;
     font-weight: 400; }
 
 header {
-  background: #5c4d8e;
-  color: #fffff3;
-  position: relative;
-  text-align: center;
-  height: 80px; }
-  header ul {
-    list-style: none; }
-  header li {
-    display: inline-block; }
-    header li a {
-      font-size: 18px;
-      text-decoration: none !important;
-      display: block;
-      padding: 30px 20px; }
-    header li a:hover {
-      color: #fffff3; }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.418)), url(images/mainphoto.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh; }
 
-#landingphoto {
-  width: 100%; }
+.hero-text-box {
+  position: absolute;
+  width: auto;
+  top: 75%;
+  left: 4%;
+  color: #fef9f4; }
+  .hero-text-box h1 {
+    font-size: 75px;
+    font-weight: 600;
+    font-family: 'Lato Bold', sans-serif;
+    word-spacing: 3px; }
+    .hero-text-box h1 span {
+      font-weight: 100;
+      font-family: 'Lato Thin', sans-serif;
+      font-style: italic;
+      letter-spacing: 1px; }
 
-#titlePhoto {
-  color: white; }
-  #titlePhoto h1 {
-    font-size: 65px;
-    font-weight: 600; }
-    #titlePhoto h1 span {
-      font-weight: 100; }
+li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 25px; }
+  li a {
+    color: #fef9f4;
+    font-family: 'Lato Thin', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 16px; }
 
 #map {
-  height: 600px;
-  width: 50%; }
+  height: 760px;
+  width: 100%; }
