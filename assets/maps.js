@@ -230,7 +230,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 // Necessary to AJAX call fusion tables in order to have referencable data columns?!?!?!
-// var fusionURL = ['https://fusiontables.google.com/data?docid=10-15741He9QL1OYhAUdTwVaQaFhZLe-1DvXguGru#rows:id=1'];
+var fusionURL = ['https://fusiontables.google.com/data?docid=10-15741He9QL1OYhAUdTwVaQaFhZLe-1DvXguGru#rows:id=1'];
 
 // $.ajax({
 //     url: fusionURL.join(''),
@@ -241,17 +241,20 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 // });
 
 
+
+
 var myJSON = 0;
+var userInput = "SMU06112445000000001";
+$.getJSON('/data/' + userInput, function (data) {
 
-$.getJSON('/data', function (data) {
-
-    $("#map").on('click', function () {
-        // console.log("a");
+    $("button").on('click', function () {
         for (i = 0; i < data.length; i++) {
             var myJSON = JSON.stringify(data[i].value);
-            // console.log(data[i]);
+            // console.log(data[(data.length - 1)].year);
+            $("#date-data").html("<br><br>Month: " + data[i].periodName + "<br>");
+            $("#year-data").html("Year: " + (data[(data.length - 1)].year) + " - " + data[i].year + "<br><br>");
 
-            $("#unemployment-data").html("Unemployment rate by county: " + data[i].value + "%<br><br>");
+            $("#unemployment-data").html("Increase in employment in Orange County Information industry: " + (data[i].value - (data[(data.length - 1)].value)) + "<br><br>");
 
             if (i >= 0) {
                 return;

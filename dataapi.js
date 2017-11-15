@@ -3,8 +3,10 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var axios = require("axios");
-var dataString = "LASST060000000000003 LASST060000000000004 LASST060000000000005";
+var dataString = "SMU06112445000000001";
 var dataArray = dataString.split(" ");
+
+// var dataArray = {"seriesid":["SMU06112445000000001", "LASST060000000000004", "LASST060000000000005"]};
 // console.log(dataArray);
 
 // Sets up the Express App
@@ -25,20 +27,23 @@ app.use(express.static('public'));
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html", "maps.js"));
-  
+
 });
 
-app.get("/data", function (req, res) {
-  axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/' + dataArray[0] + '?registrationkey=4b920f31441640c28f78a718782d5f6e')
+app.get("/data/:hotdog/:soda?", function (req, res) {
+  console.log(req.params.soda);
+  console.log(req.params.hotdog);
+  axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/' + req.params.hotdog + '?registrationkey=a4faaa6f019c42eabd6ba809c57f1c85')
     .then(function (response) {
-      console.log(response);
+      // console.log(response);
       res.json(response.data.Results.series[0].data);
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
       res.status(500).send({ error: 'Something\'s not quite right' });
     });
 });
+
 // app.get("/add", function(req, res) {
 //   res.sendFile(path.join(__dirname, "add.html"));
 // });
