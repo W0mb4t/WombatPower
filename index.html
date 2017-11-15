@@ -82,22 +82,27 @@
             <div class="col-md-6">
                 <div id="map"></div>
             </div>
-            <div class=".col-md-6 dropdownbox">
-
+            <div class=".col-md-6">
+                <!-- Use any element to open the sidenav -->
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
 
                 <!-- Use any element to open the sidenav -->
-                <span onclick="openNav()">open</span>
 
-                <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-                <div id="main">
-                        <div id="mySidenav" class="sidenav">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                <a href="#">test</a>
-                                <a href="#">test2</a>
-                                <a href="#">test3</a>
-                                <a href="#">test4</a>
-                            </div>
-                </div>
+                <span onclick="openNav()">
+                    <div class=menubutton></div>
+                </span>
+                <span onclick="openNav()">
+                    <div class=menubutton></div>
+                </span>
+                <span onclick="openNav()">
+                    <div class=menubutton></div>
+                </span>
 
             </div>
         </div>
