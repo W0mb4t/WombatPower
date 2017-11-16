@@ -31,18 +31,36 @@ header {
       font-style: italic;
       letter-spacing: 1px; }
 
-li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 40px;
-  margin-top: 25px; }
-  li a {
-    color: #fef9f4;
-    font-family: 'Lato Thin', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-size: 16px; }
+nav {
+  text-align: right;
+  margin-right: 130px; }
+  nav li {
+    text-align: right;
+    list-style: none;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 25px; }
+      nav li a {
+        color: #fef9f4;
+        font-family: 'Lato Thin', sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-size: 16px; }
+      nav li a :link {
+         color: #fef9f4;
+         font-family: 'Lato Thin', sans-serif;
+         font-weight: 600;
+         letter-spacing: 1px;
+         text-decoration: none;
+         font-size: 16px; }
+       nav li a :link :visited {
+         color: #fef9f4;
+         font-family: 'Lato Thin', sans-serif;
+         font-weight: 600;
+         letter-spacing: 1px;
+         text-decoration: none;
+         font-size: 16px; }
 
 #map {
   height: 760px;
@@ -107,10 +125,7 @@ li {
     font-size: 28px; }
     #data-points {
       font-size: 20px; }
-hr {
-  height: 3px;  
-  color: black;
-}
+
 #top-button {
   display: none; 
   position: fixed; 
