@@ -22,48 +22,91 @@
     <header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 navbar">
-                    <ul>
-                        <li>
-                            <a href="#"> HOME </a>
-                        </li>
-                        <li>
-                            <a href="#"> TEST 1 </a>
-                        </li>
-                        <li>
-                            <a href="#"> TEST 2 </a>
-                        </li>
-                    </ul>
+                <div class="col-12">
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#"> HOME </a>
+                            </li>
+                            <li>
+                                <a href="#"> TEST 1 </a>
+                            </li>
+                            <li>
+                                <a href="#"> TEST 2 </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="hero-text-box">
+                        <h1>PROJECT
+                            <span>WOMBAT</span>
+                        </h1>
+                    </div>
+
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <img id="landingphoto" src="images/mainphoto.png" alt="Suit Boy">
-                <div class="bottom-left">Project Wombat</div>
-                <div id="titlePhoto"></div>
+    <article>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div id="whatitdoestitle">
+                        <h1> Lorem Ipsum? </h1>
+                    </div>
+                    <div id="whatitdoestext">
+                        <p>Lorem ipsum dolor sit amet, facete omittantur ea eum, eam illud saperet complectitur ei. Te eam mundi
+                            oblique. Ne fastidii dignissim cum, cu wisi ludus deseruisse sea. Ea etiam perfecto gubergren
+                            sed, vix decore argumentum et. Te usu augue corpora repudiare, at aeque clita eam. Meis eirmod
+                            platonem ex quo, vim doming consectetuer ei. Reprimique contentiones ne has. In nec quaeque singulis
+                            intellegebat, no duo quot iuvaret veritus. Tacimates percipitur in nam, sumo dolore dolorem est
+                            id, in errem ludus nonumes vel. Brute soluta nostro sea te, eam an quod cibo omittam. Ea vis
+                            laboramus torquatos, in minim verterem suavitate his. Ne his vero dicit officiis, eloquentiam
+                            delicatissimi eu qui, ius sonet impetus electram at. Eu minim mucius ius, libris mollis appareat
+                            sed te, habemus postulant urbanitas pro ex. Sit ne imperdiet consectetuer, pri dicta dolores
+                            singulis et. Eum ut sale nostrum oporteat. Saperet lobortis ad pri. Cu animal ponderum per. Sea
+                            meis fierent complectitur no, ignota numquam ad qui. Sit debet persius scriptorem at, discere
+                            commune praesent ex nam. Qui erat quidam delicata cu, te has aliquip disputando. Ad reque feugait
+                            definitiones cum, mollis officiis mea ne. Vel dictas accusam cu, ea eos nisl brute summo.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
+    </article>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
                 <div id="map"></div>
             </div>
-            <div class="col-6">
-                <br>
-                <div id="data-list">
-                    <u>Response Data</u>
+            <div class=".col-md-6 dropdownbox">
+
+
+                <span onclick="openNav()">open</span>
+                <div id="main">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#data-list" class="industry" onclick="closeNav()" data-info="5">Information</a>
+                        <a href="#data-list" class="industry" onclick="closeNav()">Construction</a>
+                    </div>
+                </div>
+                <div>
                     <br>
-                    <br>Month: September
-                    <br> Year: 2017
-                    <br>
-                    <div id="unemployment-data"></div>
+                    <div id="data-list">
+                        <u>Response Data</u>
+                        <br><br>
+                        <div id="name-data">Series ID:</div>
+                        <div id="date-data">
+                            <br> Month:
+                        </div>
+                        <div id="year-data">Year:</div>
+                        <br>
+                        <div id="unemployment-data">Increase in employment (thousands): </div>
+                    </div>
+
                 </div>
             </div>
         </div>

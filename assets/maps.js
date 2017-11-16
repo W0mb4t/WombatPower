@@ -229,33 +229,26 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-// Necessary to AJAX call fusion tables in order to have referencable data columns?!?!?!
-// var fusionURL = ['https://fusiontables.google.com/data?docid=10-15741He9QL1OYhAUdTwVaQaFhZLe-1DvXguGru#rows:id=1'];
+function openNav() {
+    document.getElementById("mySidenav").style.width = "50.5%";
+}
 
-// $.ajax({
-//     url: fusionURL.join(''),
-//     dataType: 'jsonp',
-//     success: function (data) {
-//         console.log(data);
-//     }
-// });
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    $(".industry").style = "0";
+}
 
-
-var myJSON = 0;
+var infoIndustry = "";
 
 $.getJSON('/data', function (data) {
 
-    $("#map").on('click', function () {
-        // console.log("a");
-        for (i = 0; i < data.length; i++) {
-            var myJSON = JSON.stringify(data[i].value);
-            // console.log(data[i]);
+    $(".industry").on('click', function () {
 
-            $("#unemployment-data").html("Unemployment rate by county: " + data[i].value + "%<br><br>");
+        $("#name-data").html("Series ID: " + data.infor.seriesID);
+        $("#date-data").html("<br>Month: " + data.infor.data[0].periodName + "<br>");
+        $("#year-data").html("Year: " + data.infor.data[(data.infor.data.length - 1)].year + " - " + data.infor.data[0].year + "<br><br>");
+        $("#unemployment-data").html("Increase in employment (thousands): " + (data.infor.data[0].value - (data.infor.data[(data.infor.data.length - 1)].value)) + "<br><br>");
 
-            if (i >= 0) {
-                return;
-            }
-        };
     });
 });
+
