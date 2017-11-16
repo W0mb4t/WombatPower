@@ -253,18 +253,28 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For IE and Firefox
 }
 
+
+
 $.getJSON('/data', function (data) {
+    
     $("#aco-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Accomodation.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Accomodation.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Accomodation.data[(data.Accomodation.data.length - 1)].year + " - " + data.Accomodation.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Accomodation.data[0].value - (data.Accomodation.data[(data.Accomodation.data.length - 1)].value)) + "<br><br></b>");
     });
 });
-
 $.getJSON('/data', function (data) {
     $("#bus-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Business.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Business.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Business.data[(data.Business.data.length - 1)].year + " - " + data.Business.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Business.data[0].value - (data.Business.data[(data.Business.data.length - 1)].value)) + "<br><br></b>");
@@ -272,7 +282,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#edu-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Education.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")      
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Education.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Education.data[(data.Education.data.length - 1)].year + " - " + data.Education.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Education.data[0].value - (data.Education.data[(data.Education.data.length - 1)].value)) + "<br><br></b>");
@@ -280,7 +294,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#ent-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Entertainment.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Entertainment.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Entertainment.data[(data.Entertainment.data.length - 1)].year + " - " + data.Entertainment.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Entertainment.data[0].value - (data.Entertainment.data[(data.Entertainment.data.length - 1)].value)) + "<br><br></b>");
@@ -288,7 +306,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#est-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Estate.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Estate.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Estate.data[(data.Estate.data.length - 1)].year + " - " + data.Estate.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Estate.data[0].value - (data.Estate.data[(data.Estate.data.length - 1)].value)) + "<br><br></b>");
@@ -296,7 +318,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#fin-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Finance.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Finance.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Finance.data[(data.Finance.data.length - 1)].year + " - " + data.Finance.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Finance.data[0].value - (data.Finance.data[(data.Finance.data.length - 1)].value)) + "<br><br></b>");
@@ -304,7 +330,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#goo-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Goods.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")                
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Goods.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Goods.data[(data.Goods.data.length - 1)].year + " - " + data.Goods.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Goods.data[0].value - (data.Goods.data[(data.Goods.data.length - 1)].value)) + "<br><br></b>");
@@ -312,7 +342,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#gov-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Government.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Government.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Government.data[(data.Government.data.length - 1)].year + " - " + data.Government.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Government.data[0].value - (data.Government.data[(data.Government.data.length - 1)].value)) + "<br><br></b>");
@@ -320,7 +354,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#inf-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Information.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Information.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Information.data[(data.Information.data.length - 1)].year + " - " + data.Information.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Information.data[0].value - (data.Information.data[(data.Information.data.length - 1)].value)) + "<br><br></b>");
@@ -328,6 +366,9 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#man-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Management.seriesID + "</b>");
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Management.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Management.data[(data.Management.data.length - 1)].year + " - " + data.Management.data[0].year + "<br></b>");
@@ -336,7 +377,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#manu-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Manufacturing.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Manufacturing.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Manufacturing.data[(data.Manufacturing.data.length - 1)].year + " - " + data.Manufacturing.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Manufacturing.data[0].value - (data.Manufacturing.data[(data.Manufacturing.data.length - 1)].value)) + "<br><br></b>");
@@ -344,7 +389,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#min-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Mining.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Mining.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Mining.data[(data.Mining.data.length - 1)].year + " - " + data.Mining.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Mining.data[0].value - (data.Mining.data[(data.Mining.data.length - 1)].value)) + "<br><br></b>");
@@ -352,7 +401,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#ret-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Retail.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Retail.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Retail.data[(data.Retail.data.length - 1)].year + " - " + data.Retail.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Retail.data[0].value - (data.Retail.data[(data.Retail.data.length - 1)].value)) + "<br><br></b>");
@@ -360,7 +413,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#tec-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Technical.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Technical.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Technical.data[(data.Technical.data.length - 1)].year + " - " + data.Technical.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Technical.data[0].value - (data.Technical.data[(data.Technical.data.length - 1)].value)) + "<br><br></b>");
@@ -368,7 +425,11 @@ $.getJSON('/data', function (data) {
 });
 $.getJSON('/data', function (data) {
     $("#tra-buttons").on('click', function () {
+        var buttonID = $(this).html();
+        console.log(buttonID);
+
         $("#name-data").html("<em>Series ID:   </em><b>" + data.Transportation.seriesID + "</b>");
+        $("#industry-data").html("<em>Industry:  </em><b>" + buttonID + "</b>")        
         $("#date-data").html("<br><em>Month:   </em><b>" + data.Transportation.data[0].periodName + "<br></b>");
         $("#year-data").html("<em>Year:   </em><b>" + data.Transportation.data[(data.Transportation.data.length - 1)].year + " - " + data.Transportation.data[0].year + "<br></b>");
         $("#unemployment-data").html("<em>Increase in employment (thousands):   </em><b>" + (data.Transportation.data[0].value - (data.Transportation.data[(data.Transportation.data.length - 1)].value)) + "<br><br></b>");

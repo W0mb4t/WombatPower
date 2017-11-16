@@ -30,6 +30,11 @@ header {
       font-family: 'Lato Thin', sans-serif;
       font-style: italic;
       letter-spacing: 1px; }
+li :hover{
+  color: #fef9f4 ;
+  border-bottom: 1.5px solid #fef9f4 ;
+  transition: border-bottom 0.4s;
+  padding: 4px; }
 
 nav {
   text-align: right;
@@ -147,7 +152,6 @@ nav {
   text-align: center;
 }
 #data-points p:hover {
-  color:black;
   text-align: center;
   background-color: white;
   border: 1px solid black;
