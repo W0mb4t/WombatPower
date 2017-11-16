@@ -30,10 +30,10 @@
                                 <a href="#"> HOME </a>
                             </li>
                             <li>
-                                <a href="#"> TEST 1 </a>
+                                <a href="data.html"> DATA </a>
                             </li>
                             <li>
-                                <a href="#"> TEST 2 </a>
+                                <a href="about.html"> ABOUT </a>
                             </li>
                         </ul>
                     </nav>
@@ -48,28 +48,35 @@
             </div>
         </div>
     </header>
-
+    <button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
     <article>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
+            <div class="row panel panel-default">
+                <div class="col-12 panel-heading middle-para">
                     <div id="whatitdoestitle">
-                        <h1> Lorem Ipsum? </h1>
+                        <h1> What is Project Wombat?</h1>
                     </div>
-                    <div id="whatitdoestext">
-                        <p>Lorem ipsum dolor sit amet, facete omittantur ea eum, eam illud saperet complectitur ei. Te eam mundi
-                            oblique. Ne fastidii dignissim cum, cu wisi ludus deseruisse sea. Ea etiam perfecto gubergren
-                            sed, vix decore argumentum et. Te usu augue corpora repudiare, at aeque clita eam. Meis eirmod
-                            platonem ex quo, vim doming consectetuer ei. Reprimique contentiones ne has. In nec quaeque singulis
-                            intellegebat, no duo quot iuvaret veritus. Tacimates percipitur in nam, sumo dolore dolorem est
-                            id, in errem ludus nonumes vel. Brute soluta nostro sea te, eam an quod cibo omittam. Ea vis
-                            laboramus torquatos, in minim verterem suavitate his. Ne his vero dicit officiis, eloquentiam
-                            delicatissimi eu qui, ius sonet impetus electram at. Eu minim mucius ius, libris mollis appareat
-                            sed te, habemus postulant urbanitas pro ex. Sit ne imperdiet consectetuer, pri dicta dolores
-                            singulis et. Eum ut sale nostrum oporteat. Saperet lobortis ad pri. Cu animal ponderum per. Sea
-                            meis fierent complectitur no, ignota numquam ad qui. Sit debet persius scriptorem at, discere
-                            commune praesent ex nam. Qui erat quidam delicata cu, te has aliquip disputando. Ad reque feugait
-                            definitiones cum, mollis officiis mea ne. Vel dictas accusam cu, ea eos nisl brute summo.
+                    <div id="whatitdoestext" class="panel-body">
+                        <p>
+                            Project Wombat was designed with
+                            <em>
+                                <b>you</b>
+                            </em>&nbsp in mind.
+                            <br>
+                            <br> With how difficult the job market has become in recent years, a reliable data source would be
+                            ideal for use in hunting.
+                            <br> However, many sites nowadays are outdated, depreciated, and wholly confusing to filter through.
+                            <br>
+                            <b>That's where Project Wombat comes in.</b>
+                            <br> Our site operates by using the Bureau of Labor Statistics API, pulling their data and storing
+                            it in an easy and convenient location.
+                            <br> The end goal was to create an interactive and responsive Google Map, capable of displaying data
+                            based on location whether it be county or state.
+                            <br> From there, our Google Map would update accordingly to each location's data set, changing color
+                            to represent high and low data values.
+                            <br>
+
+
                         </p>
                     </div>
                 </div>
@@ -85,26 +92,48 @@
             <div class=".col-md-6 dropdownbox">
 
 
-                <span onclick="openNav()">open</span>
+                <span onclick="openNav()" class="open-button glyphicon glyphicon-signal" style="height:25px; width:30px; color:white; float:right"></span>
                 <div id="main">
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#data-list" class="industry" onclick="closeNav()" data-info="5">Information</a>
-                        <a href="#data-list" class="industry" onclick="closeNav()">Construction</a>
+                        <a href="#data-list" id="aco-buttons" onclick="closeNav()">Accomodation and Food Services</a>
+                        <a href="#data-list" id="bus-buttons" onclick="closeNav()">Business Services</a>
+                        <a href="#data-list" id="edu-buttons" onclick="closeNav()">Education and Health Services*</a>
+                        <a href="#data-list" id="ent-buttons" onclick="closeNav()">Entertainment and Recreation</a>
+                        <a href="#data-list" id="est-buttons" onclick="closeNav()">Real Estate and Rental</a>
+                        <a href="#data-list" id="fin-buttons" onclick="closeNav()">Finance and Insurance</a>
+                        <a href="#data-list" id="goo-buttons" onclick="closeNav()">Goods Producing</a>
+                        <a href="#data-list" id="gov-buttons" onclick="closeNav()">Government</a>
+                        <a href="#data-list" id="inf-buttons" onclick="closeNav()">Information</a>
+                        <a href="#data-list" id="man-buttons" onclick="closeNav()">Management of Companies and Enterprises</a>
+                        <a href="#data-list" id="manu-buttons" onclick="closeNav()">Manufacturing</a>
+                        <a href="#data-list" id="min-buttons" onclick="closeNav()">Mining and Logging*</a>
+                        <a href="#data-list" id="ret-buttons" onclick="closeNav()">Retail Trade</a>
+                        <a href="#data-list" id="tec-buttons" onclick="closeNav()">Scientific and Technical Services</a>
+                        <a href="#data-list" id="tra-buttons" onclick="closeNav()">Transportation, Warehousing, and Utilities</a>
+
                     </div>
                 </div>
                 <div>
                     <br>
                     <div id="data-list">
-                        <u>Response Data</u>
-                        <br><br>
-                        <div id="name-data">Series ID:</div>
-                        <div id="date-data">
-                            <br> Month:
-                        </div>
-                        <div id="year-data">Year:</div>
+                        <u>Industry Data for the State of California</u>
                         <br>
-                        <div id="unemployment-data">Increase in employment (thousands): </div>
+                        <br>
+                        <div id="name-data">
+                            <em>Series ID:</em>
+                        </div>
+                        <div id="date-data">
+                            <br>
+                            <em>Month:</em>
+                        </div>
+                        <div id="year-data">
+                            <em>Year:</em>
+                        </div>
+                        <br>
+                        <div id="unemployment-data">
+                            <em>Increase in employment (thousands):</em>
+                        </div>
                     </div>
 
                 </div>

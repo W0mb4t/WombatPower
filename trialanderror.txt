@@ -1,0 +1,8 @@
+// console.log(data);
+        // almost got a global variable for this value reference to work
+        // var buttonID = $(this).html();
+        // console.log(buttonID);
+        // var asdasdasd = data.buttonID;
+        // var asdasd = ("data" + "." + buttonID + "." + seriesID);
+        // console.log(asdasdasd);
+        // var buttonData = data + "." + buttonID;
