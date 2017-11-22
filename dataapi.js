@@ -22,21 +22,21 @@ app.get("/", function (req, res) {
 app.get("/data", function (req, res) {
   // Extra API Keys: d17ddaa6addf4f2d8068222b736ea817 ; ae16ac12483a44eaaf5fc0079150c5ba ;
   Promise.all([
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000000600000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000001000000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000003000000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000004200000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000004300000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000005000000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000005552000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000005553000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006000000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006054000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006055000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006500000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000007071000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000007072000001?registrationkey=54078754f8a044c5b506e55c169d3acf'),
-    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000009000000001?registrationkey=54078754f8a044c5b506e55c169d3acf')
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000000600000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000001000000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000003000000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000004200000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000004300000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000005000000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000005552000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000005553000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006000000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006054000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006055000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000006500000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000007071000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000007072000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba'),
+    axios.post('https://api.bls.gov/publicAPI/v2/timeseries/data/SMS06000009000000001?registrationkey=ae16ac12483a44eaaf5fc0079150c5ba')
 
   ]).then(function (response) {
 
